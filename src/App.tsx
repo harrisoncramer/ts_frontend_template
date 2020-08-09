@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import AppRouter from "./components/Router";
+import ReactGA from "react-ga";
+import { ApolloProvider } from "@apollo/react-hooks";
+import client from "./graphql/client";
 
 function App() {
+  useEffect(() => {
+    // Use Google Analytics
+    ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS as string);
+    ReactGA.pageview("/");
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+      <AppRouter />;
+    </ApolloProvider>
   );
 }
 
