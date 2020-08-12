@@ -1,4 +1,3 @@
-import { onError } from "apollo-link-error";
 import {
   ApolloClient,
   InMemoryCache,
@@ -6,9 +5,10 @@ import {
   ApolloLink,
 } from "@apollo/client";
 
+import { onError } from "@apollo/client/link/error";
+
 const client = new ApolloClient({
   link: ApolloLink.from([
-    //@ts-ignore
     onError(({ graphQLErrors, networkError }) => {
       if (graphQLErrors)
         graphQLErrors.forEach(({ message, locations, path }) =>
