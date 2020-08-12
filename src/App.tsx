@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import AppRouter from "./components/Router";
+import { AppRouter } from "./routers";
 import ReactGA from "react-ga";
 import { ApolloProvider } from "@apollo/client";
 import client from "./graphql/client";
