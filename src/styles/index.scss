@@ -3,8 +3,8 @@
 @import "./abstracts/mixins";
 
 // Generic Styling
+@import "./normalize/normalize";
 @import "./generics/pseudos";
 
 // Components
 @import "./components/header";
-@import "./normalize/normalize";

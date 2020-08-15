@@ -1,0 +1,11 @@
+@mixin menu {
+  font-family: $menuFont;
+  font-size: $l;
+  color: black;
+}
+
+@mixin tight {
+  margin: 0;
+  padding: 0;
+}
+

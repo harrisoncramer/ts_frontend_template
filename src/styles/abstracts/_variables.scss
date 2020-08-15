@@ -2,8 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 $titleFont: "Bebas Neue";
-$h1FontSize: 2em;
-$bodyFont: "Raleway";
+$menuFont: "Raleway";
+$bodyFont: "Helvetica";
+$h1FontSize: 2.5em;
 
 // Colors
 $primaryColor: #6d699d;
@@ -15,7 +16,4 @@ $backgroundColor: lightgrey;
 $s: 10px;
 $m: 15px;
 $l: 20px;
-$xl: 25px;
-
-$mainFont: "Raleway";
-$mainFont: "Raleway";
+$xl: 30px;

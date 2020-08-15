@@ -23,6 +23,25 @@
   }
 }
 
-.drawer li {
-  color: pink;
+.drawer {
+  .MuiPaper-root {
+    width: 200px;
+    .close {
+      margin-right: auto;
+      margin-left: 0;
+    }
+    ul {
+      list-style-type: none;
+      padding: $m;
+      margin: 0;
+      li {
+        @include menu;
+        p {
+          text-decoration: none;
+          color: black;
+          @include tight;
+        }
+      }
+    }
+  }
 }

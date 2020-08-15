@@ -3,6 +3,8 @@ import { Drawer, IconButton } from "@material-ui/core";
 import { Menu, Close } from "@material-ui/icons";
 import history from "../../history";
 
+import Links from "./links";
+
 const Header = React.memo(function Header(props) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -33,15 +35,17 @@ const Header = React.memo(function Header(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
         >
-          <IconButton onClick={handleDrawerToggle}>
+          <IconButton className="close" onClick={handleDrawerToggle}>
             <Close />
           </IconButton>
-          <div className="content">
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-          </div>
+          <Links
+            setMobileOpen={setMobileOpen}
+            links={[
+              { label: "Calendar", link: "/calendar" },
+              { label: "Senate", link: "/committees/senate" },
+              { label: "House", link: "/committees/house" },
+            ]}
+          />
         </Drawer>
       </nav>
     </header>
