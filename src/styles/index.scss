@@ -1,1 +1,10 @@
+// Variables + Mixins
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+// Generic Styling
+@import "./generics/pseudos";
+
+// Components
 @import "./components/header";
+@import "./normalize/normalize";
