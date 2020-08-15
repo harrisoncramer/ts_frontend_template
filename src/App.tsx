@@ -4,6 +4,8 @@ import ReactGA from "react-ga";
 import { ApolloProvider } from "@apollo/client";
 import client from "./graphql/client";
 
+import "./styles/index.scss";
+
 function App() {
   useEffect(() => {
     // Use Google Analytics
