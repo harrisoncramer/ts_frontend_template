@@ -23,7 +23,7 @@ export default function Links({
   return (
     <ul>
       {links.map(({ link, label }) => (
-        <ListItem button onClick={() => handleGoToLink(link)}>
+        <ListItem button key={link} onClick={() => handleGoToLink(link)}>
           <li className="pointer">
             <p className="menu plain tight">{label}</p>
           </li>
