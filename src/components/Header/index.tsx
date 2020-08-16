@@ -17,7 +17,7 @@ const Header = React.memo(function Header(props) {
   }
 
   return (
-    <header className="header">
+    <header className="header shadow">
       <nav>
         <IconButton onClick={handleDrawerToggle} className="menuButton pointer">
           <Menu />
