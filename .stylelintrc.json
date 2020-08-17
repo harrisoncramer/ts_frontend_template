@@ -10,6 +10,7 @@
         "ignoreAtRules": [
           "function",
           "if",
+          "else",
           "each",
           "include",
           "mixin"

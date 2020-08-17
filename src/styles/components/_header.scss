@@ -5,11 +5,8 @@
   width: 100%;
   background-color: $primaryColor;
   padding: $s;
-  @include box-shadow(0, 5px, 5px, grey, false);
   nav {
-    justify-content: flex-start;
-    display: flex;
-    align-items: center;
+    @include flex-left;
 
     h1.mainTitle {
       font-family: $titleFont;
@@ -40,7 +37,7 @@
         p {
           text-decoration: none;
           color: black;
-          @include tight;
+          @include no-margin-padding;
         }
       }
     }

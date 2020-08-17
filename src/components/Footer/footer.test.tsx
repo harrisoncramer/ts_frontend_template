@@ -1,7 +1,8 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Header from "../components/Header";
+import Footer from "./index";
+
 test("renders the component", () => {
-  const component = shallow(<Header />);
+  const component = shallow(<Footer />);
   expect(component).toMatchSnapshot();
 });

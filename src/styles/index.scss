@@ -2,10 +2,11 @@
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
 
-// Generic Styling
+// Normalization
 @import "./normalize/normalize";
-@import "./generics/pseudos";
-@import "./generics/common";
 
-// Components
+// Common Styling
+@import "./common/pseudos";
+
+// Component-specific styling
 @import "./components/header";
