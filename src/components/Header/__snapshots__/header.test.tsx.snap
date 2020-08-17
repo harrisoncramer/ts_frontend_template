@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the component 1`] = `
+exports[`Header Should render the Header 1`] = `
 <header
   className="header shadow"
 >
