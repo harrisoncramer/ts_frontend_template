@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1597771948113" clover="3.2.0">
-  <project timestamp="1597771948113" name="All files">
-    <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3" elements="12" coveredelements="10" complexity="0" loc="8" ncloc="8" packages="2" files="2" classes="2"/>
-    <package name="Footer">
+<coverage generated="1597783373374" clover="3.2.0">
+  <project timestamp="1597783373375" name="All files">
+    <metrics statements="49" coveredstatements="25" conditionals="6" coveredconditionals="1" methods="26" coveredmethods="11" elements="81" coveredelements="37" complexity="0" loc="49" ncloc="49" packages="12" files="17" classes="17"/>
+    <package name="src">
+      <metrics statements="6" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="App.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/App.tsx">
+        <metrics statements="5" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+      </file>
+      <file name="index.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/index.tsx">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Footer">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/components/Footer/index.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -10,8 +25,8 @@
         <line num="8" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="Header">
-      <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+    <package name="src.components.Header">
+      <metrics statements="11" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="4"/>
       <file name="index.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/components/Header/index.tsx">
         <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
         <line num="10" count="2" type="stmt"/>
@@ -20,6 +35,107 @@
         <line num="14" count="0" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
         <line num="21" count="4" type="stmt"/>
+      </file>
+      <file name="links.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/components/Header/links.tsx">
+        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="26" count="12" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.ViewWrapper">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/components/ViewWrapper/index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.graphql">
+      <metrics statements="5" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="client.ts" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/graphql/client.ts">
+        <metrics statements="5" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+      </file>
+    </package>
+    <package name="src.history">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/history/index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.routers">
+      <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
+      <file name="index.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/routers/index.tsx">
+        <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.views">
+      <metrics statements="8" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <file name="About.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/About.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+      <file name="Calendar.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/Calendar.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+      <file name="Dashboard.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/Dashboard.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="NotFound.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/NotFound.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.views.About">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/About/index.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.views.Calendar">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/Calendar/index.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.views.Dashboard">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/Dashboard/index.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.views.NotFound">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/NotFound/index.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
       </file>
     </package>
   </project>
