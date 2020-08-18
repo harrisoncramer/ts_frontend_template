@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Footer from "./index";
 
 describe("Footer", () => {
-  it("Should render the Footer", () => {
-    const component = shallow(<Footer />);
-    expect(component).toMatchSnapshot();
+  it("should have footer text", () => {
+    const { getByText } = render(<Footer />);
+    expect(getByText("Copyright 2020, Harrison Cramer"));
   });
 });
