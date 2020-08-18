@@ -5,6 +5,8 @@ import history from "../../history";
 
 import Links from "./links";
 
+import "./style.scss";
+
 const Header = React.memo(function Header(props) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
