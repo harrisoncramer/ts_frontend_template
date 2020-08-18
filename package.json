@@ -41,6 +41,7 @@
     "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
     "test": "SKIP_PREFLIGHT_CHECK=true react-scripts test --verbose --watchAll",
     "test:coverage": "SKIP_PREFLIGHT_CHECK=true react-scripts test --verbose --coverage --watchAll=false",
+    "test:view": "live-server coverage/lcov-report",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -69,6 +70,7 @@
     "eslint-plugin-react": "^7.20.6",
     "jest": "^26.4.0",
     "jest-fetch-mock": "^3.0.3",
+    "live-server": "^1.2.1",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
