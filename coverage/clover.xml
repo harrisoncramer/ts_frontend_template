@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1597783655561" clover="3.2.0">
-  <project timestamp="1597783655561" name="All files">
-    <metrics statements="49" coveredstatements="25" conditionals="6" coveredconditionals="1" methods="26" coveredmethods="11" elements="81" coveredelements="37" complexity="0" loc="49" ncloc="49" packages="12" files="17" classes="17"/>
+<coverage generated="1597784193911" clover="3.2.0">
+  <project timestamp="1597784193911" name="All files">
+    <metrics statements="41" coveredstatements="28" conditionals="6" coveredconditionals="1" methods="22" coveredmethods="14" elements="69" coveredelements="43" complexity="0" loc="41" ncloc="41" packages="11" files="13" classes="13"/>
     <package name="src">
       <metrics statements="6" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
       <file name="App.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/App.tsx">
@@ -83,59 +83,36 @@
         <line num="19" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="src.views">
-      <metrics statements="8" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
-      <file name="About.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/About.tsx">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-      </file>
-      <file name="Calendar.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/Calendar.tsx">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-      </file>
-      <file name="Dashboard.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/Dashboard.tsx">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-      </file>
-      <file name="NotFound.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/NotFound.tsx">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-      </file>
-    </package>
     <package name="src.views.About">
-      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/About/index.tsx">
-        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.views.Calendar">
-      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/Calendar/index.tsx">
-        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.views.Dashboard">
-      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/Dashboard/index.tsx">
-        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.views.NotFound">
-      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/harrisoncramer/Desktop/Code/projects/ts_cloture.app.backend/client/src/views/NotFound/index.tsx">
-        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
       </file>
     </package>
   </project>

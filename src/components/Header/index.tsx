@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Drawer, IconButton } from "@material-ui/core";
-import { Menu, Close } from "@material-ui/icons";
+import Close from "@material-ui/icons/Close";
+import Menu from "@material-ui/icons/Menu";
 import history from "../../history";
 
 import Links from "./links";
