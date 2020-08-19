@@ -2,17 +2,16 @@ import React, { useState } from "react";
 import { Drawer, IconButton } from "@material-ui/core";
 import Close from "@material-ui/icons/Close";
 import Menu from "@material-ui/icons/Menu";
-import history from "../../history";
 
 import Links from "./links";
 
 import "./style.scss";
 
-const Header = React.memo(function Header(props) {
+const Header = function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleGoHome = () => {
-    history.push("/");
+    //history.push("/");
   };
 
   function handleDrawerToggle() {
@@ -22,7 +21,11 @@ const Header = React.memo(function Header(props) {
   return (
     <header className="header shadow">
       <nav>
-        <IconButton onClick={handleDrawerToggle} className="menuButton pointer">
+        <IconButton
+          data-testid="menuButton"
+          onClick={handleDrawerToggle}
+          className="menuButton pointer"
+        >
           <Menu />
         </IconButton>
         <h1 onClick={handleGoHome} className="mainTitle pointer">
@@ -30,15 +33,16 @@ const Header = React.memo(function Header(props) {
         </h1>
         <Drawer
           className="drawer"
-          variant="temporary"
+          data-testid="drawer"
           anchor={"left"}
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
         >
-          <IconButton className="close" onClick={handleDrawerToggle}>
+          <IconButton
+            data-testid="closeButton"
+            className="close"
+            onClick={handleDrawerToggle}
+          >
             <Close />
           </IconButton>
           <Links
@@ -53,6 +57,6 @@ const Header = React.memo(function Header(props) {
       </nav>
     </header>
   );
-});
+};
 
 export default Header;

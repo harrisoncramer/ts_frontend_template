@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>6/7</span>
             </div>
         
             
@@ -43,9 +43,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>6/7</span>
             </div>
         
             
@@ -113,7 +113,18 @@
 <a name='L55'></a><a href='#L55'>55</a>
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -123,17 +134,26 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -172,28 +192,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from "react";
 import { Drawer, IconButton } from "@material-ui/core";
-import { Menu, Close } from "@material-ui/icons";
+import Close from "@material-ui/icons/Close";
+import Menu from "@material-ui/icons/Menu";
 import history from "../../history";
 &nbsp;
 import Links from "./links";
 &nbsp;
 import "./style.scss";
 &nbsp;
-const Header = React.memo(function Header(props) {
+const Header = function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 &nbsp;
   const handleGoHome = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
 <span class="cstat-no" title="statement not covered" >    history.push("/");</span>
   };
 &nbsp;
-  function handleDrawerToggle() {
+  const handleDrawerToggle = () =&gt; {
     setMobileOpen(!mobileOpen);
-  }
+  };
 &nbsp;
   return (
     &lt;header className="header shadow"&gt;
       &lt;nav&gt;
-        &lt;IconButton onClick={handleDrawerToggle} className="menuButton pointer"&gt;
+        &lt;IconButton
+          data-testid="menuButton"
+          onClick={handleDrawerToggle}
+          className="menuButton pointer"
+        &gt;
           &lt;Menu /&gt;
         &lt;/IconButton&gt;
         &lt;h1 onClick={handleGoHome} className="mainTitle pointer"&gt;
@@ -201,6 +226,7 @@ const Header = React.memo(function Header(props) {
         &lt;/h1&gt;
         &lt;Drawer
           className="drawer"
+          data-testid="drawer"
           variant="temporary"
           anchor={"left"}
           open={mobileOpen}
@@ -209,7 +235,11 @@ const Header = React.memo(function Header(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
         &gt;
-          &lt;IconButton className="close" onClick={handleDrawerToggle}&gt;
+          &lt;IconButton
+            data-testid="close"
+            className="close"
+            onClick={handleDrawerToggle}
+          &gt;
             &lt;Close /&gt;
           &lt;/IconButton&gt;
           &lt;Links
@@ -224,7 +254,7 @@ const Header = React.memo(function Header(props) {
       &lt;/nav&gt;
     &lt;/header&gt;
   );
-});
+};
 &nbsp;
 export default Header;
 &nbsp;</pre></td></tr></table></pre>
@@ -234,7 +264,7 @@ export default Header;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Aug 18 2020 16:56:33 GMT-0400 (Eastern Daylight Time)
+                at Tue Aug 18 2020 19:34:31 GMT-0400 (Eastern Daylight Time)
             </div>
         </div>
         <script src="../../../prettify.js"></script>
