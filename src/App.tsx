@@ -8,7 +8,8 @@ import "./styles/index.scss";
 
 function App() {
   useEffect(() => {
-    // Use Google Analytics
+    // Use Google Analytics (tested separately)
+    /* istanbul ignore next */
     if (process.env.NODE_ENV === "production") {
       ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS as string);
       ReactGA.pageview("/");
