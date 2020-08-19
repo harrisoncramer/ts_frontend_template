@@ -1,13 +1,13 @@
 import React, { ReactElement } from "react";
+import { Link } from "react-router-dom";
 import { ListItem } from "@material-ui/core";
-import history from "../../history";
 
-interface Link {
+interface LinkType {
   label: string;
   link: string;
 }
 export interface Props {
-  links: Link[];
+  links: LinkType[];
   setMobileOpen(arg: boolean): void;
 }
 
@@ -15,19 +15,18 @@ export default function Links({
   links,
   setMobileOpen,
 }: Props): ReactElement | null {
-  const handleGoToLink = (link: string): void => {
+  const handleGoToLink = (): void => {
     setMobileOpen(false);
-    history.push(link);
   };
 
   return (
     <ul>
       {links.map(({ link, label }) => (
-        <ListItem button key={link} onClick={() => handleGoToLink(link)}>
-          <li className="pointer">
-            <p className="menu plain tight">{label}</p>
-          </li>
-        </ListItem>
+        <Link key={link} to={link} onClick={() => handleGoToLink()}>
+          <ListItem button key={link}>
+            {label}
+          </ListItem>
+        </Link>
       ))}
     </ul>
   );

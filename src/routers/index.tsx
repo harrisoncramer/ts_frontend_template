@@ -7,6 +7,7 @@ import ViewWrapper from "../components/ViewWrapper";
 import Dashboard from "../views/Dashboard";
 import About from "../views/About";
 import NotFound from "../views/NotFound";
+//import ErrorBoundary from "../components/ErrorBoundary";
 
 const AppRouter = () => (
   <Router history={history}>

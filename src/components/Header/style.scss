@@ -34,15 +34,13 @@
       list-style-type: none;
       padding: $m;
       margin: 0;
-      li {
+      a {
         @include menu;
-        p {
-          text-decoration: none;
-          color: black;
-          @include no-margin-padding;
-        }
+
+        text-decoration: none;
+        color: black;
+        @include no-margin-padding;
       }
     }
   }
 }
-

@@ -1,4 +1,5 @@
 @mixin menu {
+  text-decoration: none;
   font-family: $menuFont;
   font-size: $l;
   color: black;
