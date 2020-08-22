@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
+import { QueryParamProvider } from "use-query-params";
 
 import history from "../history";
 
@@ -13,11 +14,13 @@ import NotFound from "../views/NotFound";
 
 const AppRouter = () => (
   <Router history={history}>
-    <Switch>
-      <Route path="/" exact render={() => <ViewWrapper View={Dashboard} />} />
-      <Route path="/about" render={() => <ViewWrapper View={About} />} />
-      <Route render={() => <ViewWrapper View={NotFound} />} />
-    </Switch>
+    <QueryParamProvider ReactRouterRoute={Route}>
+      <Switch>
+        <Route path="/" exact render={() => <ViewWrapper View={Dashboard} />} />
+        <Route path="/about" render={() => <ViewWrapper View={About} />} />
+        <Route render={() => <ViewWrapper View={NotFound} />} />
+      </Switch>
+    </QueryParamProvider>
   </Router>
 );
 
