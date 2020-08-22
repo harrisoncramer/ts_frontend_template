@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import TextBox from "./index";
 
 describe("TextBox", () => {
@@ -17,7 +17,7 @@ describe("TextBox", () => {
     fireEvent.change(element, { target: { value: "b" } });
     expect(element.value).toBe("b");
   });
-  it("should run callback on keypress", () => {
+  it("should run callback on enter", () => {
     const fn = jest.fn();
     const { getByTestId } = render(
       <TextBox callBack={fn} placeholder="placeholder" />
@@ -26,8 +26,9 @@ describe("TextBox", () => {
     fireEvent.change(element, { target: { value: "o" } });
     fireEvent.change(element, { target: { value: "ok" } });
     expect(element.value).toBe("ok");
-    fireEvent.change(element, { target: { value: "" } });
-    expect(element.value).toBe("");
-    expect(fn).toHaveBeenCalledTimes(3);
+    expect(fn).toHaveBeenCalledTimes(0);
+    const form = getByTestId("form");
+    fireEvent.submit(form);
+    expect(fn).toHaveBeenCalledTimes(1);
   });
 });

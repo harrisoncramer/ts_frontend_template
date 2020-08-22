@@ -3,7 +3,7 @@ import React, { ReactElement, useState, SyntheticEvent } from "react";
 export interface TextBoxProps {
   placeholder: string;
   callBack: (val: string) => void;
-  word: string;
+  word?: string;
 }
 
 export default function TextBox({
@@ -11,17 +11,25 @@ export default function TextBox({
   callBack,
   word,
 }: TextBoxProps): ReactElement | null {
+  const [input, setInput] = useState(word || "");
   const handleChange = (e: React.FormEvent<HTMLInputElement>): void => {
     const val = e.currentTarget.value;
-    callBack(val);
+    setInput(val);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    callBack(input);
   };
   return (
-    <input
-      placeholder={placeholder}
-      data-testid="textbox"
-      type="text"
-      value={word}
-      onChange={(e) => handleChange(e)}
-    />
+    <form onSubmit={handleSubmit} data-testid="form">
+      <input
+        placeholder={placeholder}
+        data-testid="textbox"
+        type="text"
+        value={input}
+        onChange={(e) => handleChange(e)}
+      />
+    </form>
   );
 }
