@@ -29,7 +29,7 @@ const Header = function Header() {
           <Menu />
         </IconButton>
         <h1 onClick={handleGoHome} className="mainTitle pointer">
-          Cloture
+          {process.env.REACT_APP_APP_NAME}
         </h1>
         <Drawer
           className="drawer"
@@ -48,9 +48,8 @@ const Header = function Header() {
           <Links
             setMobileOpen={setMobileOpen}
             links={[
-              { label: "Calendar", link: "/calendar" },
-              { label: "Senate", link: "/committees/senate" },
-              { label: "House", link: "/committees/house" },
+              { label: "Dashboard", link: "/" },
+              { label: "About", link: "/about" },
             ]}
           />
         </Drawer>

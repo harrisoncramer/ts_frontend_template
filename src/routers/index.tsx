@@ -1,25 +1,25 @@
-/* istanbul ignore file */
-
 import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import { QueryParamProvider } from "use-query-params";
 
 import history from "../history";
 
-import ViewWrapper from "../components/ViewWrapper";
 import Dashboard from "../views/Dashboard";
 import About from "../views/About";
 import NotFound from "../views/NotFound";
-//import ErrorBoundary from "../components/ErrorBoundary";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-const AppRouter = () => (
+const AppRouter = (): React.ReactElement => (
   <Router history={history}>
     <QueryParamProvider ReactRouterRoute={Route}>
+      <Header />
       <Switch>
-        <Route path="/" exact render={() => <ViewWrapper View={Dashboard} />} />
-        <Route path="/about" render={() => <ViewWrapper View={About} />} />
-        <Route render={() => <ViewWrapper View={NotFound} />} />
+        <Route path="/" exact component={Dashboard} />
+        <Route path="/about" component={About} />
+        <Route component={NotFound} />
       </Switch>
+      <Footer />
     </QueryParamProvider>
   </Router>
 );

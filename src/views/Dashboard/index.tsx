@@ -1,18 +1,16 @@
 import React, { ReactElement } from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { useQueryParam, StringParam } from "use-query-params";
-import { GET_BOOKS } from "../../graphql/queries";
+import { SIMPLE_QUERY } from "../../graphql/queries";
 
 import TextBox from "../../components/TextBox";
 
-interface DashboardProps {}
-
-const Dashboard = (props: DashboardProps): ReactElement | null => {
+const Dashboard = (): ReactElement | null => {
   const [filter, setFilter] = useQueryParam("filter", StringParam);
 
-  const { loading, error, data, fetchMore } = useQuery(GET_BOOKS);
+  const { loading, error, data, fetchMore } = useQuery(SIMPLE_QUERY);
   if (loading) return <div>Loading...</div>;
-  if (error) return <div>`Error! ${error.message}`</div>;
+  if (error) return <div>Something wrong with server: ${error.message}</div>;
 
   const handleOnChange = (val: string): void => {
     setFilter(val);
@@ -25,7 +23,9 @@ const Dashboard = (props: DashboardProps): ReactElement | null => {
         word={filter || ""}
         callBack={handleOnChange}
       />
+      <p>Welcome to the Dashboard page!</p>
       <p>{filter}</p>
+      <p>Data is {JSON.stringify(data)}</p>
     </div>
   );
 };
