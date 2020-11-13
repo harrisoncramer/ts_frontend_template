@@ -4,7 +4,6 @@ declare namespace NodeJS {
     REACT_APP_GOOGLE_ANALYTICS: string;
     REACT_APP_API: string;
     REACT_APP_APP_NAME: string;
-    REACT_APP_OK_GO: string;
   }
 }
 
